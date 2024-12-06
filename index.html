@@ -6,31 +6,87 @@
     <title>Социальные сети Михаила Нижник</title>
     <style>
         body {
-            text-align: center;
-            margin: 50px;
             font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
-        h1 {
-            color: #333;
+        header {
+            background-color: #1d1d1d;
+            color: #00b0ff;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        main {
+            flex: 1;
+            padding: 30px 10px;
         }
 
         button {
             display: block;
-            width: 100%;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 12px;
             font-size: 18px;
-            margin: 10px;
-            padding: 10px;
+            color: #ffffff;
+            background-color: #333;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+
+        footer {
+            background-color: #1d1d1d;
+            color: #888;
+            padding: 10px 0;
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .invisible-button {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 1000;
         }
     </style>
 </head>
 <body>
-    <h1>Социальные сети Михаила Нижник</h1>
-    <button onclick="window.location.href='https://vk.com/hituzip'">VK</button>
-    <button onclick="window.location.href='https://github.com/hituzip'">GitHub</button>
-    <button onclick="window.location.href='https://www.twitch.tv/hituzip'">Twitch</button>
-    <button onclick="window.location.href='https://discord.gg/5PCAfDXUtJ'">Discord</button>
-    <button onclick="window.location.href='https://t.me/hituzip'">Telegram</button>
+    <header>
+        <h1>Социальные сети Михаила Нижник</h1>
+    </header>
+    <main>
+        <button onclick="window.location.href='https://vk.com/hituzip'">VK</button>
+        <button onclick="window.location.href='https://github.com/hituzip'">GitHub</button>
+        <button onclick="window.location.href='https://www.twitch.tv/hituzip'">Twitch</button>
+        <button onclick="window.location.href='https://discord.gg/5PCAfDXUtJ'">Discord</button>
+        <button onclick="window.location.href='https://t.me/hituzip'">Telegram</button>
+    </main>
+    <button class="invisible-button" onclick="window.location.href='https://server.hituzip.ru'" aria-label="Скрытая кнопка"></button>
+    <footer>
+        <p>&copy; 2024 Михаил Нижник</p>
+    </footer>
 </body>
 </html>
